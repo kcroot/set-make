@@ -1,0 +1,43 @@
+#/bin/bash
+
+# usuwamy stare pliki z wyborami 
+
+    rm -f /tmp/file*
+
+# Tworzymy labele do zmiennych wybieranych w menu
+    tag1=amd64;
+    tag2=armhf;
+    tag3=arm64;
+
+    item1=kompilator_amd64;
+    item2=kompilator_armhf;
+    item3=kompilator_arm64;
+
+
+    tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/menu
+    
+
+dialog --backtitle 'Zmiana make' --title test --radiolist 'wybór architektury' 20 50 20 \
+		 $tag1  $item1 off \
+		 $tag2  $item2 off \
+		 $tag3  $item3 off 2> $tempfile
+
+retval=$(<"${tempfile}") 
+
+    
+    case $retval in
+
+    $tag1) cp bashrc.amd64 bashrc2 ;;
+    $tag2) cp bashrc.armhf bashrc2 ;;
+    $tag3) cp bashrc.arm64 bashrc2 ;;
+    
+    
+    
+    esac
+
+     rm -f /tmp/file*
+     
+clear
+kompilator=$(cat kompilator.txt)
+echo $kompilator
+
