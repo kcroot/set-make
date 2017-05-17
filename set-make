@@ -39,6 +39,5 @@ retval=$(<"${tempfile}")
      rm -f /tmp/file*
      
 clear
-kompilator=$(cat kompilator.txt)
-echo $kompilator
+#echo "wybrano architekture : $tag"
 
