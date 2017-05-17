@@ -39,5 +39,5 @@ retval=$(<"${tempfile}")
      rm -f /tmp/file*
      
 clear
-#echo "wybrano architekture : $tag"
+##echo "wybrano architekture : $tag"
 
