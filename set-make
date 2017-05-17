@@ -28,9 +28,9 @@ retval=$(<"${tempfile}")
     
     case $retval in
 
-    $tag1) cp ~/bashrc.amd64  ~/.bashrc && source ~/.bashrc  ;;
-    $tag2) cp ~/bashrc.armhf   ~/.bashrc && source ~/.bashrc ;;
-    $tag3) cp ~/bashrc.arm64  ~/.bashrc && source ~/.bashrc ;;
+    $tag1) cp ~/bashrc.amd64  ~/.bashrc && source  ~/.bashrc  ;;
+    $tag2) cp ~/bashrc.armhf   ~/.bashrc && source   ~/.bashrc ;;
+    $tag3) cp ~/bashrc.arm64  ~/.bashrc && source  ~/.bashrc ;;
     
     
     
